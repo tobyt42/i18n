@@ -1,0 +1,19 @@
+{
+  "name": "@tobyt/i18n",
+  "version": "1.0.0",
+  "description": "Simple i18n implementation",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobyt42/infoscreen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobyt42/infoscreen/issues"
+  },
+  "homepage": "https://github.com/tobyt42/infoscreen",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Toby Terhoeven <tobyt1123+development@gmail.com> (https://github.com/tobyt42/infoscreen)",
+  "license": "ISC"
+}
