@@ -1,15 +1,27 @@
 const properties = { en: {} };
 let path = ["en"];
+let fallbackLocale;
+
+function getTranslation(key, locale) {
+  if (locale) {
+    return properties[locale][key];
+  }
+
+  if (fallbackLocale && properties[fallbackLocale][key]) {
+    console.warn(
+      `missing i18n key for locale <${path}> <${key}>, falling back to <${fallbackLocale}>`
+    );
+    return properties[fallbackLocale][key];
+  }
+
+  console.warn(`missing i18n key for locale <${path}>: <${key}>`);
+  return `(???:${key}:???)`;
+}
 
 export default function i18n(key, params) {
   const localeWithKey = path.find(locale => properties[locale][key]);
 
-  if (!localeWithKey) {
-    console.error(`missing i18n key for locale <${path}>: <${key}>`);
-    return `(???:${key}:???)`;
-  }
-
-  const translation = properties[localeWithKey][key];
+  const translation = getTranslation(key, localeWithKey);
 
   if (!params) {
     return translation;
@@ -37,6 +49,10 @@ export function setLocale(locale) {
     path.push(language);
     properties[language] = properties[language] || {};
   }
+}
+
+export function setFallbackLocale(locale) {
+  fallbackLocale = locale;
 }
 
 export function addTranslations(locale, translations) {

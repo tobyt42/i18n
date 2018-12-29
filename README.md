@@ -51,3 +51,15 @@ if (tokenExists("some.key.modifier")) {
     console.log("translation", i18n("some.key"));
 }
 ```
+
+### Missing translations behaviour
+
+By default, translations are looked up in their regional and language locale only (e.g. `de-DE` first, `de` second if not found). If a translation is missing for the language locale, a placeholder `(???:some.key:???)` is displayed.
+
+If you wish, you can define a fallback locale which is queried if no translation can be found in the user locales (e.g. `de-DE` first, `de` second, and finally `en`).
+
+```
+import { setFallbackLocale } from "@tobyt/i18n";
+
+setFallbackLocale("en");
+```
