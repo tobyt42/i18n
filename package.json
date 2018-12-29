@@ -5,15 +5,15 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tobyt42/infoscreen.git"
+    "url": "git+https://github.com/tobyt42/i18n.git"
   },
   "bugs": {
-    "url": "https://github.com/tobyt42/infoscreen/issues"
+    "url": "https://github.com/tobyt42/i18n/issues"
   },
-  "homepage": "https://github.com/tobyt42/infoscreen",
+  "homepage": "https://github.com/tobyt42/i18n",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Toby Terhoeven <tobyt1123+development@gmail.com> (https://github.com/tobyt42/infoscreen)",
+  "author": "Toby Terhoeven <tobyt1123+development@gmail.com> (https://github.com/tobyt42/i18n)",
   "license": "ISC"
 }
