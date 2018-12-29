@@ -22,7 +22,7 @@ export default function i18n(key, params) {
   );
 }
 
-export function hasKey(key) {
+export function tokenExists(key) {
   return path.some(locale => !!properties[locale][key]);
 }
 

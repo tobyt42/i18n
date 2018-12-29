@@ -38,14 +38,14 @@ import i18n from "@tobyt/i18n";
 console.log("translation", i18n("some.key"));
 ```
 
-### HasKey check
+### Check whether a translation token exists
 
-With `hasKey` you can check whether a translation exists.
+With `tokenExists` you can check whether a translation exists.
 
 ```
-import i18n, { hasKey } from "@tobyt/i18n";
+import i18n, { tokenExists } from "@tobyt/i18n";
 
-if (hasKey("some.key.modifier")) {
+if (tokenExists("some.key.modifier")) {
     console.log("translation", i18n("some.key.modifier"));
 } else {
     console.log("translation", i18n("some.key"));
