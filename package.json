@@ -14,6 +14,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Toby Terhoeven <tobyt1123+development@gmail.com> (https://github.com/tobyt42/i18n)",
+  "author": "Toby Terhoeven <toby@terhoeven.co.uk> (https://github.com/tobyt42/i18n)",
   "license": "ISC"
 }
