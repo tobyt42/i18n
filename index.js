@@ -18,8 +18,12 @@ function getTranslation(key, locale) {
   return `(???:${key}:???)`;
 }
 
-export default function i18n(key, params) {
-  const localeWithKey = path.find(locale => properties[locale][key]);
+export default function i18n(key, params, queryLocales) {
+  const localePath = queryLocales
+    ? queryLocales.filter(locale => properties[locale])
+    : path;
+
+  const localeWithKey = localePath.find(locale => properties[locale][key]);
 
   const translation = getTranslation(key, localeWithKey);
 
